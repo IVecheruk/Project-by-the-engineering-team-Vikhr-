@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Автозаправка агродронов — презентация</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/slides.css">
+<!-- highlight.js + тема VS2015 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+<script>try{hljs.highlightAll();}catch(e){console.warn(e)}</script>
+
+</head>
+<body class="mode-push ease-expo">
+  <div class="wrap">
+    <!-- INFO GRID -->
+
+    <section class="info-grid">
+      <div class="info-card">
+        <h2>Основная информация</h2>
+        <p><strong>Провайдер:</strong> Финансовый Университет</p>
+        <p><strong>Название программы:</strong> Реализация инженерных разработок в сфере инфраструктуры для БВС</p>
+        <p><strong>Регион образовательной программы:</strong> Алтайский край</p>
+        <p><strong>Название инженерной задачи:</strong> Разработка наземной станции для заправки агродрона</p>
+        <p><strong>Название команды:</strong> Вихрь</p>
+      </div>
+      <div>
+        <div class="logo-card">куар код тг и почты </div>
+        <div class="team-card">
+          <h3>Состав команды</h3>
+          <ol>
+            <li>Вечерук Илья Вадимович</li>
+            <li>Гаевский Денис Игоревич</li>
+            <li>Климов Артем Дмитриевич</li>
+            <li>Шиляев Алексей Дмитриевич</li>
+            <li>Алексеев Даниил Владимирович</li>
+          </ol>
+          <p><strong>Наставник:</strong> Сурова Надежда Юрьевна</p>
+        </div>
+      </div>
+    </section>
+    <!--описание -->
+    <section class="team">
+   <div class="team-row">
+      <div class="member">
+        <strong>Вечерук Илья Вадимович</strong>
+        <ul>
+          <li>Компиляция и структурирование информации.</li>
+          <li>Программная часть.</li>
+          <li>Сборка установки.</li>
+        </ul>
+      </div>
+
+      <div class="member">
+        <strong>Климов Артем Дмитриевич</strong>
+        <ul>
+          <li>Сбор информации программной части.</li>
+          <li>Разработка схем и абстракций.</li>
+          <li>Разработка ПО.</li>
+        </ul>
+      </div>
+
+      <div class="member">
+        <strong>Шиляев Алексей Дмитриевич</strong>
+        <ul>
+          <li>Сборка установки.</li>
+        </ul>
+      </div>
+
+      <div class="member">
+        <strong>Гаевский Денис Игоревич</strong>
+        <ul>
+          <li>Сбор информации аппаратной части.</li>
+          <li>Разработка схем и абстракций.</li>
+          <li>Сборка установки.</li>
+        </ul>
+      </div>
+
+      <div class="member">
+        <strong>Алексеев Даниил Владимирович</strong>
+        <ul>
+          <li>Сборка установки.</li>
+        </ul>
+      </div>
+    </div>
+    </section>
+    <hr class="slide-sep">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="title">
+        <span class="badge">Автоматизированная заправка агродронов</span>
+        <h1>Описание задачи и технические требования</h1>
+        <p class="subtitle">Проект автономной станции дозированной заправки химическими растворами для агродронов. Фокус на скорость, точность и синхронизацию с циклом замены аккумуляторов.</p>
+        <div class="kpis">
+          <div class="kpi"><div class="num">2–5 мин</div><div class="muted">цикл замены АКБ</div></div>
+          <div class="kpi"><div class="num">40–50 л</div><div class="muted">ёмкость бака на заправку</div></div>
+          <div class="kpi"><div class="num">5–10%</div><div class="muted">повышение эффективности</div></div>
+        </div>
+      </div>
+      <aside class="side-card">
+        <h3>Краткое резюме</h3>
+        <ul class="list">
+          <li><strong>Цель:</strong> быстро и точно заправлять дроны жидкими химрастворами.</li>
+          <li><strong>Проблема:</strong> несинхронные циклы АКБ и заправки создают простои персонала.</li>
+          <li><strong>Гипотеза:</strong> автоматизация снижает простои и ускоряет подготовку к вылету.</li>
+          <li><strong>Решение:</strong> интеграция станции дозированной заправки в зону возврата дронов с синхронизацией по событиям.</li>
+        </ul>
+      </aside>
+    </section>
+  
+   <hr class="slide-sep">
+
+
+  <!-- SOLUTION BLOCKS SIDE BY SIDE -->
+    <div class="solution-container">
+      <h2 class="solution-title">Описание решения инженерной задачи</h2>
+
+      <section class="solution">
+        <div class="solution-grid">
+          <div class="solution-text">
+            <p><strong>Аппаратные технологии:</strong></p>
+            <p><strong>Насосные системы с контролем давления:</strong> помпы.</p>
+            <p><strong>Двигатель:</strong> мотор - двигатель 12V.</p>
+            <p><strong>Контроллеры и микроконтроллеры:</strong> плата для разработки с микроконтроллером.</p>
+            <p><strong>Светодиодная подсветка для ночного режима:</strong> RGB светодиодная лента.</p>
+            <p><strong>Прочные химически стойкие материалы:</strong> шланги на основе ПВХ, резервуар для жидкости на основе полиэтилена.</p>
+            <p><strong>Датчики:</strong> аналоговые входы ADC1 (потенциометр, уровни жидкости), цифровые входы для NPN/PNP датчиков.</p>
+            <p><strong>Периферия:</strong> реле для управления помпами, датчики уровня жидкости, помпы.</p>
+          </div>
+          <div class="image-placeholder">Место для схемы / картинки</div>
+        </div>
+      </section>
+    
+      <section class="solution">
+
+        <div class="solution-grid">
+          <div class="solution-text">
+            <p><strong>Программная часть:</strong></p>
+            <br>
+
+            <p><strong>Платформа:</strong> ESP32, программирование на C++ в Arduino IDE/PlatformIO.</p>
+            <p><strong>Логика:</strong> неблокирующая машина состояний на millis(), без задержек.</p>
+            <p><strong>Интерфейс:</strong> I2C-LCD дисплей для статуса, кнопки INPUT_PULLUP и потенциометр для задания объема воды.</p>
+            <p><strong>Архитектура:</strong> объектная модель; класс станции (пины, объем, таймеры), массив объектов для масштабируемости.</p>
+            <p><strong>Библиотеки:</strong> Wire.h (I2C), LiquidCrystal_I2C.h (дисплей), Math.h (математические операции), Arduino Core API (digital/analog I/O, map, millis).</p>
+          </div>
+          <div class="image-placeholder">Место для схемы / картинки</div>
+        </div>
+        </div>
+        
+
+         <!-- code -->
+      </section>
+      <hr class="slide-sep">
+          <section class="code">
+      <h2>Описание решения инженерной задачи</h2>
+      <pre><code class="language-cpp hljs">// --- Фаза A: наполнение микс-бака ---
+if (unit.fillingMix) {
+  bool mixOverflow = digitalRead(unit.mixMoisturePin) == HIGH;     // Контроль перелива микс-бака
+  int remainingL = max((int)((unit.pumpStopTime - millis()) / MS_PER_LITER), 0); // Оставшееся «время»
+  if (remainingL != unit.currentLiters) {                          // Обновлять строку только при изменении
+    unit.currentLiters = remainingL;
+    updateStatusLine(unit, 2, "mix <- " + String(unit.currentLiters)); // Отсчёт для фазы A
+  }
+
+  if (millis() &gt;= unit.pumpStopTime || mixOverflow) {              // Условия завершения фазы A
+    if (mixOverflow) unit.batchLiters = MIX_TANK_CAPACITY;         // Если сработал датчик — бак полный
+    stopFillingMix(unit);                                          // Остановить помпу №1 и закрыть клапаны
+    startPumpingDrone(unit);                                       // Перейти к фазе B
+  }
+}</code></pre>
+    </section>
+  <hr class="slide-sep">
+     <!-- result -->
+<div class="results-container">
+   <h2 class="results-title">Результаты испытаний решения инженерной задачи</h2>
+      <section class="result">
+        <p><strong>Дата:</strong> 04.09.2025.<br>
+        <strong>Место:</strong> Лаборатория филиала Финансового Университета (пр. Ленина, 54)</p>
+        <p><strong>Контрольная точка №1.</strong><br>
+        Сборка и отладка основного стека аппаратной части, тестирование работоспособности оборудования.</p>
+        <div class="image-row">
+          <div class="image-placeholder">Место для фото (сборка и отладка)</div>
+          <div class="image-placeholder">Место для фото (тестовый модуль)</div>
+        </div>
+      </section>
+
+      <section class="result">
+        <p><strong>Дата:</strong> 05.09.2025.<br>
+        <strong>Место:</strong> Лаборатория филиала Финансового Университета (пр. Ленина, 54)</p>
+        <p><strong>Контрольная точка №2.</strong><br>
+        Сборка финального конструкта установки, тестирование работы аппаратной и программной части.</p>
+        <div class="image-row">
+          <div class="image-placeholder">Место для фото (финальная сборка)</div>
+          <div class="image-placeholder">Место для фото (испытания)</div>
+        </div>
+      </section>
+      </div>
+<hr class="slide-sep">
+<div class="results-container">
+      <section class="result2">
+        <h2>Результаты испытаний решения инженерной задачи</h2>
+        <p><strong>Дата:</strong> 06.09.2025.<br>
+        <strong>Место:</strong> Лаборатория филиала Финансового Университета (пр. Ленина, 54)</p>
+        <p><strong>Контрольная точка №3.</strong><br>
+        Демонстрация итоговой работы установки и запись видео испытаний.</p>
+        <div class="video-placeholder">Место для видео</div>
+      </section>
+      </div>
+      <hr class="slide-sep">
+          <!-- REQUIREMENTS BLOCK -->
+    <section>
+      
+      <div class="requirements-table">
+        <h2 class="section-title">Ключевые технические требования инженерной задачи</h2>
+        <div class="category-row">
+          <div class="category-block">
+            <h3>Условия эксплуатации</h3>
+            <div class="param-block-y"><strong>Температурный диапазон</strong><span>+5..+40 °C</span></div>
+            <div class="param-block-y"><strong>Защита от внешних факторов</strong><span>Есть</span></div>
+          </div>
+          <div class="category-block">
+            <h3>Портативность</h3>
+            <div class="param-block-y"><strong>Устойчивость к агрессивной<br>химической среде</strong><span>Есть</span></div>
+          </div>
+          <div class="category-block">
+            <h3>Конструктивные элементы</h3>
+            <div class="param-block-y"><strong>Контроль уровня заполнения</strong><span>8..60 л</span></div>
+            <div class="param-block-y"><strong>Подсветка для работы ночью</strong><span>Есть</span></div>
+            <div class="param-block-y"><strong>Взлётно-посадочная площадка</strong><span>670x670 мм ± 20 мм</span></div>
+          </div>
+          <div class="category-block">
+            <h3>Функциональность</h3>
+            <div class="param-block-y"><strong>Работа в полевых условиях</strong><span>Есть</span></div>
+            <div class="param-block-y"><strong>Массогабаритные параметры</strong><span>Оптимальные для транспортировки</span></div>
+            <div class="param-block-y"><strong>Одновременное обслуживание</strong><span>Более двух единиц</span></div>
+            <div class="param-block-y"><strong>Время заправки бака</strong><span>≤ 5 минут</span></div>
+          </div>
+        </div>
+        <div class="bottom-row">
+          <div class="category-block">
+            <h3>Бак станции</h3>
+            <div class="param-block-y"><strong>Объём</strong><span>20 л ± 2 л, с функцией рециркуляции раствора</span></div>
+            <div class="param-block-y"><strong>Материалы</strong><span>Устойчивые к химическим и физическим воздействиям</span></div>
+            <div class="param-block-y"><strong>Производительность</strong><span>л/мин (значение уточняется)</span></div>
+          </div>
+          <div class="category-block">
+            <h3>Параметры и входные воздействия</h3>
+            <div class="param-block-n"><strong>Давление и расход раствора</strong><span>Устанавливается</span></div>
+            <div class="param-block-n"><strong>Тип используемых химикатов и условия их применения</strong><span>Устанавливается</span></div>
+          </div>
+          <div class="category-block">
+            <h3>Эксплуатация</h3>
+            <div class="param-block-y"><strong>Простая настройка и запуск</strong><span>Да</span></div>
+            <div class="param-block-y"><strong>Высокая точность дозирования</strong><span>Да</span></div>
+            <div class="param-block-y"><strong>Возможность проведения техобслуживания</strong><span>Да</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tyt dengi budut -->
+<!-- BUDGET SLIDE — таблица слева, график справа -->
+<hr class="slide-sep">
+<section class="budget-grid">
+  <!-- ЛЕВЫЙ БЛОК: Таблица в широком "результатном" контейнере -->
+<div class="report-card">
+  <h2 class="report-title">Расчёт заработной платы</h2>
+  <div class="table-wrap">
+    <table class="neo-table">
+      <thead>
+        <tr>
+          <th>Должность</th>
+          <th>Оклад / мес</th>
+          <th>Часовой тариф</th>
+          <th>Трудоёмк.</th>
+          <th>Основная з/п</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>программист</td><td>80 000</td><td>434,7</td><td>25</td><td>13 041</td>
+        </tr>
+        <tr>
+          <td>инженер</td><td>90 000</td><td>489,1</td><td>45</td><td>26 411,4</td>
+        </tr>
+        <tr class="sep"><td colspan="5"></td></tr>
+        <tr>
+          <td>смета</td><td>-</td><td>-</td><td>-</td><td>13 627</td>
+        </tr>
+        <tr class="sep"><td colspan="5"></td></tr>
+        <tr class="grand">
+          <td><strong>итого всего</strong></td><td>-</td><td>-</td><td>-</td><td><strong>53 079,4</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+  <!-- ПРАВЫЙ БЛОК: График -->
+  <div class="card-like card-like--yellow budget-chart">
+    <h3>Анализ затрат</h3>
+    <svg viewBox="0 0 520 180" class="chart">
+      <!-- подписи -->
+      <text x="20" y="40"  class="tick">программист</text>
+      <text x="20" y="80" class="tick">инженер</text>
+      <text x="20" y="120" class="tick">смета</text>
+
+      <!-- бары -->
+      <rect x="120" y="28" width="200" height="18" class="bar"/>
+      <rect x="120" y="68" width="405" height="18" class="bar"/>
+      <rect x="120" y="108" width="210" height="18" class="bar"/>
+
+      <!-- значения -->
+      <text x="325" y="42"  class="val">13 041</text>
+      <text x="520" y="82" class="val right">26 411,4</text>
+      <text x="335" y="122" class="val">13 627</text>
+    </svg>
+    <div class="total-pill total-pill--green"><strong>Итого: 53 079,4</strong></div>
+  </div>
+</section>
+
+
+ <hr class="slide-sep">
+    <!-- refleksiya -->
+     <!-- REFLECTION SLIDE -->
+      <section class="reflection reflection--compact">
+         <div class="reflection-card">
+           <header class="reflection-header"> 
+            <h2>Рефлексия результата решения инженерной задачи</h2>
+           </header> 
+           <div class="reflection-grid reflection-grid--onecol">
+             <div class="reflection-text">
+               <h3>Проблемы которые удалось решить:</h3> 
+               <ul class="list"> 
+                <li>Сложность в проектировании универсального крепления для баков агродронов</li> 
+                <li>проблема в заправки без вмешательства оператора между циклами</li>
+                </ul> <h3>Как нам удалось это решить:</h3> 
+                <ul class="list">
+                   <li>Мы взяли за пример прообраз крепления в виде заправочного пистолета</li>
+                   <li>Мы реализовали циклическую заправку бака</li>
+                     </ul> <h3>Перспективы:</h3> <ul class="list"> 
+                      <li>Модульная архитектура проекта, добавление датчиков температуры для сохранности химикатов.</li> 
+                    </ul> 
+                  </div>
+                 </div> 
+                </div>
+              </section>
+              
+ <hr class="slide-sep">
+<!-- REFLECTION (compact, no images) -->
+<section class="doc-slide">
+  <!-- ЛЕВЫЙ ШИРОКИЙ БЛОК -->
+  <div class="doc-left">
+    <header>
+      <h2>Техническая документация проекта</h2>
+      <h3>Автоматизированная станция заправки агродронов</h3>
+    </header>
+
+    <ul>
+      <li><strong>Задача:</strong> ускорить подготовку агродронов за счёт автоматизации дозированной заправки.</li>
+      <li><strong>Технологии:</strong> ESP32, насосы, датчики уровня, LCD-дисплей, RGB-индикация.</li>
+      <li><strong>Программная часть:</strong> C++ (VS Code + PlatformIO), двухфазный алгоритм (А — наполнение, B — заправка).</li>
+      <li><strong>Испытания:</strong> подтверждена точность дозирования, отработана защита от перелива.</li>
+      <li><strong>Итог:</strong> система соответствует ключевым требованиям, требует доработки калибровки и тестов с агрессивными растворами.</li>
+      <li><strong>Экономика:</strong> общие затраты — 53 тыс. руб., экономия бюджета — 24,2 %.</li>
+      <li><strong>Перспективы:</strong> улучшение материалов, модульная архитектура ПО, масштабирование до серийного производства.</li>
+    </ul>
+
+    <div>
+      <h3>Схема алгоритма работы программы</h3>
+      <pre class="doc-scheme">loop()
+ ├─ handleUnitSwitch()
+ ├─ Режим ожидания
+ │    └─ чтение потенциометра → LCD
+ ├─ Запуск цикла (START)
+ │    └─ startFillingMix()
+ ├─ Фаза A (mix tank)
+ │    └─ stopFillingMix() →
+ └─ startPumpingDrone()
+      ├─ Фаза B (to drone)
+      │    └─ stopPumpingDrone()
+      │         ├─ overflow? → авария
+      │         └─ иначе: deliveredLiters ↑
+      ├─ Пауза → ready again
+      └─ RGB-индикация прогресса</pre>
+    </div>
+  </div>
+
+  <!-- ПРАВЫЙ ЖЁЛТЫЙ БЛОК С ЦЕНТРИРОВАННЫМ ТЕКСТОМ -->
+  <aside class="doc-right">
+    <div class="inner">
+      <h4>Описание этапов</h4>
+      <ul>
+        <li><strong>loop()</strong> — основной цикл программы.</li>
+        <li><strong>handleUnitSwitch()</strong> — переключение между станциями.</li>
+        <li><strong>Режим ожидания</strong> — считывание потенциометра и вывод цели на дисплей.</li>
+        <li><strong>Запуск цикла (START)</strong> — старт процесса заправки.</li>
+        <li><strong>Фаза A (mix tank)</strong> — наполнение микс-бака до уровня/объёма.</li>
+        <li><strong>Фаза B (to drone)</strong> — перекачка в бак дрона.</li>
+        <li><strong>overflow</strong> → аварийная остановка; иначе счётчик литров ↑.</li>
+        <li><strong>Пауза</strong> — короткая задержка; <strong>RGB-индикация</strong> показывает прогресс.</li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+  <script src="js/slides-auto.js"></script>
