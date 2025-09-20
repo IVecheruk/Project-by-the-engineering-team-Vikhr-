@@ -132,7 +132,3 @@ loop()
 ```
 ## Контактные данные
 - Почта для связи с представителем команды: vecheruk.99@gmail.com
-
-- <img src="img/qr.png" alt="Telegram QR code" width="150"/>
-
-
