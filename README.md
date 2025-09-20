@@ -158,6 +158,8 @@ loop()
 │       │   ├── 4.png
 │       │   └── 5.png
 │       └── video/
+│           ├── Видео работы установки.mp4
+│           └── vod.mp3
 │
 ├── LICENSE
 └── README
